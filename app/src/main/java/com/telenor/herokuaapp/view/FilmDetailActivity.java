@@ -20,6 +20,7 @@ import com.telenor.herokuaapp.utils.ToolbarOp;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
 /**
  * Created by nofal bin idrees on 2/17/2019.
  */
@@ -37,7 +38,7 @@ public class FilmDetailActivity extends AppCompatActivity {
     @BindView(R.id.poster)
     ImageView poster;
     private Context context;
-    private String titleMovie="";
+    private String titleMovie = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +57,7 @@ public class FilmDetailActivity extends AppCompatActivity {
         if (film != null) {
             //Insert film data into layout
             description.setText(film.getDescription());
-            titleMovie=film.getTitle()+" ("+film.getReleaseDate()+")";
+            titleMovie = film.getTitle() + " (" + film.getReleaseDate() + ")";
 
             try {
                 RequestOptions requestOptions = new RequestOptions().centerCrop();
@@ -88,7 +89,7 @@ public class FilmDetailActivity extends AppCompatActivity {
 
         toolbar.setTitleTextColor(Color.WHITE);
         ToolbarOp.addTitle(toolbar, context, titleMovie, ToolbarOp.Theme.Dark, true);
-       // toolbar.setBackgroundColor(getResources().getColor(R.color.transparent));
+        // toolbar.setBackgroundColor(getResources().getColor(R.color.transparent));
 
         addCustomIcons();
     }

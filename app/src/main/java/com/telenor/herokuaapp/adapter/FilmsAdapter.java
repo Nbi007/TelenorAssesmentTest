@@ -18,6 +18,7 @@ import com.telenor.herokuaapp.utils.Constants;
 import com.telenor.herokuaapp.view.FilmDetailActivity;
 
 import java.util.List;
+
 /**
  * Created by nofal bin idrees on 2/17/2019.
  */
@@ -60,12 +61,16 @@ public class FilmsAdapter extends RecyclerView.Adapter {
         nextActivity.putExtra(Constants.FILM_KEY, film);
         context.startActivity(nextActivity);
     }
+
     public FilmsAdapter(List<Film> films, Context context) {
         this.films = films;
         this.context = context;
     }
+
     @Override
-    public int getItemCount() { return films.size();}
+    public int getItemCount() {
+        return films.size();
+    }
 
     private class ItemTypeViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private View cardView;

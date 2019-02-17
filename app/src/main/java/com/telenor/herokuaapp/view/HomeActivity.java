@@ -27,6 +27,7 @@ import butterknife.ButterKnife;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
 /**
  * Created by nofal bin idrees on 2/17/2019.
  */
@@ -94,7 +95,7 @@ public class HomeActivity extends AppCompatActivity {
                             tv_emptyresult.setVisibility(View.GONE);
 
 
-                        }else{
+                        } else {
                             tv_emptyresult.setVisibility(View.VISIBLE);
                         }
                     } else {
@@ -107,7 +108,7 @@ public class HomeActivity extends AppCompatActivity {
                     stopRefreshing();
                 }
             });
-        }else{
+        } else {
             stopRefreshing();
         }
 
@@ -125,9 +126,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void startRefreshing() {
-        if (srl_films != null && srl_films.isRefreshing()) {
-            srl_films.setRefreshing(true);
-        }
+        srl_films.setRefreshing(true);
     }
 
     @Override

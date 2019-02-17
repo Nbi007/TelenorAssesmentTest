@@ -16,6 +16,7 @@ public class ToolbarOp {
     public static enum Theme {
         Dark, Light;
     }
+
     public static void addIcon(Toolbar tb, Context context, int drawableResource, int gravity, int leftMargin, int rightMargin, View.OnClickListener onClickListener) {
 
         Toolbar.LayoutParams params = new Toolbar.LayoutParams((int) PixelsOp.pxFromDp(context, 45.0f), Toolbar.LayoutParams.MATCH_PARENT);
@@ -73,7 +74,7 @@ public class ToolbarOp {
             tvTitle.setTextColor(ColorOp.getColor(context,
                     R.color.white));
 
-            tvTitle.setCustomFont(context, "Roboto-Regular.ttf");
+            tvTitle.setCustomFont(context, Constants.DEFAULT_FONT_NAME);
             tb.setBackgroundResource(R.color.colorPrimary);
         } else {
             tb.setBackgroundResource(R.color.white);

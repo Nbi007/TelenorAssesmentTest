@@ -11,5 +11,5 @@ import retrofit2.http.GET;
 
 public interface NetworkApi {
     @GET(Constants.API_END_POINT_FILMS)
-    Call<List<Film>>  GetAllFilms();
+    Call<List<Film>> GetAllFilms();
 }

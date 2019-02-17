@@ -33,6 +33,7 @@ public class AlertOp {
             ex.printStackTrace();
         }
     }
+
     /**
      * SNACK BAR WITH NO ACTION BUTTON AND DEFAULT BACKGROUND
      **/
